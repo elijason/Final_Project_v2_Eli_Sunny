@@ -48,7 +48,7 @@ public class Main {
         String equalReponse = sc.nextLine();
         if(Objects.equals(equalReponse, "equal")) {
             equalSplit(sc);
-        }else{
+        }else if (Objects.equals(equalReponse, "not equal")){
             individualizedBill(sc);
         }
 
