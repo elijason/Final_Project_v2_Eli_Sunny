@@ -54,11 +54,7 @@ public class Main {
 
     }
 
-    public static void individualizedBill(Scanner sc){
-
-    }
-
-    public static void equalSplit(Scanner sc){
+    public static void equalSplit(Scanner sc) {
         char choice;
         do {
             System.out.println("Total cost of bill?");
@@ -78,8 +74,19 @@ public class Main {
             System.out.println("Do you want to calculate another bill? (Y/N)");
             choice = sc.next().charAt(0); //reads the letter to see if user input is 'y'
         } while ((choice =='y' || (choice == 'Y')));
-
+    }
+    public static void individualizedBill(Scanner sc){
+        System.out.println("How many people spent money and ate?");
+        int numberPeople = sc.nextInt();
+        int[] peopleArray = new int[numberPeople];
+        for (int i = 1; i <= peopleArray.length; i++){
+            System.out.println("Person " + i + " spent: ");
+            double individualSpend = sc.nextInt(i);
+            individualSpend += sc.nextInt();
+            }
+        }
+    }
     }
 
-}
+
 
