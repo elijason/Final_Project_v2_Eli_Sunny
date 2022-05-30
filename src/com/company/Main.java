@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        GUI home = new GUI();
+        Home home = new Home();
 
         Scanner sc = new Scanner(System.in);
 

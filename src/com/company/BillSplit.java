@@ -24,7 +24,7 @@ public class BillSplit extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 if (e.getSource() == homeButton) {
                     f.dispose();
-                    GUI home = new GUI();
+                    Home home = new Home();
                 }
             }
         });

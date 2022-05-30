@@ -5,8 +5,8 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 import java.awt.event.*;
 
-public class GUI extends JFrame {
-    public GUI() {
+public class Home extends JFrame {
+    public Home() {
         frame();
     }
 
