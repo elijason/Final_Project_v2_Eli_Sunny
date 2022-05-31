@@ -95,9 +95,7 @@ public class Home extends JFrame {
                 f.setBackground(Color.lightGray);
             }
         });
-
-
-
+        
         p.setLayout(null);
         p.add(b1);
         p.add(b2);
