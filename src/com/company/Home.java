@@ -45,6 +45,9 @@ public class Home extends JFrame {
         JLabel labelOne = new JLabel("Welcome to the Bill Splitter!");
         labelOne.setBounds(130, 5, 300, 200);
 
+        JLabel backGroundColor = new JLabel("Set a Background Color");
+        backGroundColor.setBounds(130, 270, 180, 25);
+
         JButton blue = new JButton("Blue");
         blue.setBounds(20, 300, 70, 25);
         blue.addActionListener(new ActionListener() {
@@ -52,6 +55,7 @@ public class Home extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 p.setBackground(Color.BLUE);
                 labelOne.setForeground(Color.WHITE);
+                backGroundColor.setForeground(Color.WHITE);
                 f.setBackground(Color.BLUE);
             }
         });
@@ -63,6 +67,7 @@ public class Home extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 p.setBackground(Color.WHITE);
                 labelOne.setForeground(Color.BLACK);
+                backGroundColor.setForeground(Color.BLACK);
                 f.setBackground(Color.WHITE);
             }
         });
@@ -74,9 +79,24 @@ public class Home extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 p.setBackground(Color.BLACK);
                 labelOne.setForeground(Color.WHITE);
+                backGroundColor.setForeground(Color.WHITE);
                 f.setBackground(Color.BLACK);
             }
         });
+
+        JButton gray = new JButton("Gray");
+        gray.setBounds(290, 300, 70, 25);
+        gray.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                p.setBackground(Color.lightGray);
+                labelOne.setForeground(Color.WHITE);
+                backGroundColor.setForeground(Color.WHITE);
+                f.setBackground(Color.lightGray);
+            }
+        });
+
+
 
         p.setLayout(null);
         p.add(b1);
@@ -84,7 +104,9 @@ public class Home extends JFrame {
         p.add(blue);
         p.add(white);
         p.add(black);
+        p.add(gray);
         p.add(labelOne);
+        p.add(backGroundColor);
         f.add(p);
     }
 }
