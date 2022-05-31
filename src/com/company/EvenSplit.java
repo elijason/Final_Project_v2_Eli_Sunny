@@ -60,18 +60,22 @@ public class EvenSplit {
         calculateButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String strTotalCost = totalCostField.getText();
-                double totalCost = Double.parseDouble(strTotalCost);
-                String strTipField = tipPercentageField.getText();
-                double tipPercent = Double.parseDouble(strTipField);
-                double tipPercentToDecimal = tipPercent / 100.0;
-                double tipAmount = tipPercentToDecimal * totalCost;
-                double totalCostTipAmount = tipAmount + totalCost;
-                String strNumberOfPeople = numberPeopleField.getText();
-                double numberOfPeople = Double.parseDouble(strNumberOfPeople);
-                double eachPersonPays = totalCostTipAmount / numberOfPeople;
+                try { //checks if it is a valid number
+                    String strTotalCost = totalCostField.getText();
+                    double totalCost = Double.parseDouble(strTotalCost);
+                    String strTipField = tipPercentageField.getText();
+                    double tipPercent = Double.parseDouble(strTipField);
+                    double tipPercentToDecimal = tipPercent / 100.0;
+                    double tipAmount = tipPercentToDecimal * totalCost;
+                    double totalCostTipAmount = tipAmount + totalCost;
+                    String strNumberOfPeople = numberPeopleField.getText();
+                    double numberOfPeople = Double.parseDouble(strNumberOfPeople);
+                    double eachPersonPays = Math.round((totalCostTipAmount / numberOfPeople) * 100.0) / 100.0; //rounds to nearest hundredth
 
-                JOptionPane.showMessageDialog(f.getComponent(0), "Each Person Pays: $ " + eachPersonPays, "Individual Cost", JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(f.getComponent(0), "Each Person Pays: $ " + eachPersonPays, "Individual Cost", JOptionPane.INFORMATION_MESSAGE);
+                } catch (Exception E){
+                    JOptionPane.showMessageDialog(f.getComponent(0), "Please enter valid numbers in the fields provided.", "Error", JOptionPane.INFORMATION_MESSAGE);
+                }
             }
         });
 
