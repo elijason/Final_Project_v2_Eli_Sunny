@@ -20,7 +20,7 @@ public class IndividualSplit {
 
        JPanel p = new JPanel();
        JButton goBackButton = new JButton("Go Back");
-       goBackButton.setBounds(0, 0, 150, 25);
+       goBackButton.setBounds(0, 5, 150, 25);
        goBackButton.addActionListener(new ActionListener() {
            @Override
            public void actionPerformed(ActionEvent e) {

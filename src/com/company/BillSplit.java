@@ -18,7 +18,7 @@ public class BillSplit extends JFrame {
 
         JPanel p = new JPanel();
         JButton homeButton = new JButton("Home");
-        homeButton.setBounds(280, 0, 100, 25);
+        homeButton.setBounds(280, 5, 100, 25);
         homeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
