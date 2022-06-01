@@ -64,16 +64,15 @@ public class IndividualSplit {
                    }
                } catch (Exception E) {
                    JOptionPane.showMessageDialog(f.getComponent(0), "Please enter valid numbers in the fields provided.", "Error", JOptionPane.INFORMATION_MESSAGE);
-
-                   p.setLayout(null);
-                   p.add(goBackButton);
-                   p.add(individualTitle);
-                   p.add(howManyPeople);
-                   p.add(numberOfPeople);
-                   p.add(enterButton);
-                   f.add(p);
                }
            }
        });
+       p.setLayout(null);
+       p.add(goBackButton);
+       p.add(individualTitle);
+       p.add(howManyPeople);
+       p.add(numberOfPeople);
+       p.add(enterButton);
+       f.add(p);
    }
 }
