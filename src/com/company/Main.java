@@ -56,18 +56,6 @@ public class Main {
                 double individualSpend = sc.nextDouble();
                 sum += individualSpend;
                 System.out.println("Person " + i + " spent: " + individualSpend);
-<<<<<<< Updated upstream
-
-    public static void individualizedBill(Scanner sc){
-        System.out.println("How many people spent money and ate?");
-        int numberPeople = sc.nextInt();
-        int[] peopleArray = new int[numberPeople];
-        for (int i = 1; i <= peopleArray.length; i++){
-            System.out.println("Person " + i + " spent: ");
-            double individualSpend = sc.nextDouble();
-
-=======
->>>>>>> Stashed changes
             }
             System.out.println("The total bill is: " + sum);
             System.out.println("Do you want to calculate another bill? Y/N");
